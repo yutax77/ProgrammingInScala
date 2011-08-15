@@ -42,6 +42,12 @@
       <version>1.5</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+    	<groupId>org.scalatest</groupId>
+    	<artifactId>scalatest_2.9.0-1</artifactId>
+    	<version>1.6.1</version>
+    	<scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
