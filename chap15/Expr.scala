@@ -11,4 +11,10 @@ object Expr {
 		case BinOp("*", e, Num(1)) => e
 		case _ => expr
 	}
+
+	def simplifyAdd(e: Expr) = e match {
+		case BinOp("+", x, y) if x == y =>
+			BinOp("*", x, Num(2))
+		case _ => e
+	}
 }
