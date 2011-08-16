@@ -6,5 +6,11 @@ object Describe {
 		case Nil => "the empty list"
 		case _ => "something else"
 	}
+
+	def tupleDemo(expr: Any) =
+		expr match {
+			case (a, b, c) => println("matched " + a + b + c)
+			case _ =>
+		}
 }
 
