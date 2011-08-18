@@ -1,4 +1,4 @@
-abstract class Expr
+sealed abstract class Expr
 case class Var(name: String) extends Expr
 case class Num(num: Double) extends Expr
 case class UnOp(operator: String, arg: Expr) extends Expr
@@ -30,5 +30,10 @@ object Expr {
 		case BinOp(op, l, r) =>
 			BinOp(op, simplifyAll(l), simplifyAll(r))
 		case _ => expr
+	}
+
+	def describe(e: Expr):String = (e: @unchecked) match {
+		case Num(_) => "a number"
+		case Var(_) => "a variable"
 	}
 }
